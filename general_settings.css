@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+:root{
+    --main-brand-color: #eeb16c ;
+    --primary-color: #E6EADE ;
+    --secondary-color: #a3bd9d ;
+    --third-color: #68c7d9 ;
+    --text-color: #232933 ;
+    --secondary-text-color: #2E3744 ;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    background-color: var(--primary-color);
+    font-family: 'Sora', sans-serif;
+    font-size: 20px;
+    color: var(--text-color);
+}
+h1{
+    font-size: 100px;
+    line-height: 115%;
+}
+.subheading{
+    margin-top: 25px;
+    color: var(--secondary-text-color);
+}

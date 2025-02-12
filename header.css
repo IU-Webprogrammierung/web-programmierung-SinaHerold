@@ -1,0 +1,24 @@
+header{
+    padding: 100px 25px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 40px;
+
+    
+}
+.header_text{
+    width: 850px;
+}
+.square{
+    height: 600px;
+    width: 400px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.square img{
+    width: 100%;
+}
