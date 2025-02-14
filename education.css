@@ -118,3 +118,21 @@ body{
     border-right: 15px solid var(--main-brand-color);
     left: -15px;
 }
+
+@media screen and (max-width: 600px){
+    
+    .timeline{
+        margin: 50px auto;
+    }
+    .timeline::after{
+        left: 31px;
+    }
+    .container{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+    .text-box{
+        font-size: 13px;
+    }
+}
