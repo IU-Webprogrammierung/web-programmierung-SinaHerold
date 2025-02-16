@@ -7,3 +7,12 @@
     --text-color: #232933 ;
     --secondary-text-color: #2E3744 ;
 }
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Sora" sans-serif;
+}
