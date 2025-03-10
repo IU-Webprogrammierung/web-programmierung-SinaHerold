@@ -11,4 +11,4 @@ Zu beachten gilt es, ein responsives Design für Desktop - als auch mobile Endge
 Mit der Verwendung von HTML und CSS werden die benötigten Seiten aufgebaut. In Phase 1 sitzt der Fokus auf dem Inhalt und die Anlegung der HTML Dateien.
 In Phase 2 werden der Aufbau der CSS-Datei folgen, sowie inhaltiche Anpassungen.
 
-Projetkverantworliche: Sina Herold - 3206859
+Projetkverantworliche: Sina Herold
