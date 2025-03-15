@@ -12,10 +12,12 @@
     padding: 0;
     margin: 0;
 }
+
 html{
 font-family: 'Sora';
 line-height: 1.5rem;
 }
+
 body{
 min-height: 100vh;
 min-height: 100dvh;
@@ -24,14 +26,81 @@ color: var(--text-color);
 display: grid;
 grid-template-columns: auto 1fr;
 }
+
+main{
+    color: var(--primary-color);
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
 #sidebar{
     box-sizing: border-box;
     height: 100vh;
+    width: 200px;
+    padding: 5px 1em;
+    background-color: var(--secondary-text-color);
+    border-right: 1px solid var(--third-color);
+    position: sticky;
+    top: 0;
+    align-self: start;
 }
+
+#sidebar ul{
+list-style: none;
+}
+
+#sidebar > label{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+    .logo{
+        font-weight: 600;
+    }
+    color: var(--primary-color);
+}
+
+#sidebar ul li.active a{
+    color: var(--main-brand-color);
+}
+
+#sidebar a, #sidebar .dropdown-button, #sidebar .label{
+    border-radius: 2em;
+    padding: .85em;
+    text-decoration: none;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    cursor: pointer;
+}
+
+#sidebar src{
+    flex-shrink: 0;
+    fill: var(--secondary-color);
+}
+
+#sidebar a span, #sidebar .dropdown-button span{
+    flex-grow: 1;
+}
+
+#sidebar a:hover, #sidebar .dropdown-button:hover{
+    background-color: var(--hover-clr)
+}
+
+#sidebar .sub-menu{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 300ms ease-in-out;
+
+    >div{
+        overflow: hidden;
+    }
+}
+
 h1{
-    font-size: 100px;
-    line-height: 115%;
+    margin-top: 1em;
 }
+
 .subheading{
 margin-top: 25px;
 color: var(--secondary-text-color);
