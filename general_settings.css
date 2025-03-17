@@ -115,8 +115,26 @@ list-style: none;
     width: 100%;
 }
 
+#toggle_button{
+    display: none;
+}
 
-@media (max-width:1600px){
+label[for="toggle_button"] span{
+    font-size: 40px;
+}
+
+@media(max-width: 800px){
+    nav ul{
+        display: none;
+        flex-direction: column;
+    }
+    #toggle_button:checked ~ ul{
+        display: flex;
+    }
+}
+
+
+@media(max-width:1600px){
     h1{
         font-size: 20px;
         line-height: 1.5;
@@ -130,7 +148,7 @@ list-style: none;
     }
 }
 
-@media (max-width:480px){
+@media(max-width:480px){
     h1{
         font-size: 18px;
         line-height: 1.5;
