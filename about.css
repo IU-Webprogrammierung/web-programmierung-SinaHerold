@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+:root{
+    --main-brand-color: #eeb16c ;
+    --primary-color: #E6EADE ;
+    --secondary-color: #a3bd9d ;
+    --third-color: #68c7d9 ;
+    --text-color: #232933 ;
+    --secondary-text-color: #2E3744 ;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Sora', sans-serif;
+    box-sizing: border-box;
+}
+
+.subheading h2{
+    font-size: 20px;
+    text-align: center;
+}
+
+.flex-container{
+    padding: 70px 0;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 200px;
+    background-color: var(--secondary-color);
+    border-radius: 60px;
+    padding: 20px 20px;
+
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
