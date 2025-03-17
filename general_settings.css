@@ -102,25 +102,46 @@ color: var(--secondary-text-color);
 }
 
 .square{
-    height: 600px;
+    height: 515px;
     width: 400px;
+    max-height: 80vw;
+    max-width: 80vw;
     overflow: hidden;
     border-radius: 20px;
-    border: 5px solid var(--main-brand-color);
+    border: 4px solid var(--main-brand-color);
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-@media (max-width:1200px){
-    p{
-        font-size: 1.35rem;
+.square img{
+    width: 100%;
+}
+
+@media (max-width:1600px){
+    h1{
+        font-size: 20px;
         line-height: 1.5;
+        text-align: center;
+    }
+    .subheading{
+        text-align: center;
+    }
+    h2{
+        font-size: 16px;
     }
 }
 
 @media (max-width:480px){
-    p{
-        font-size: 1.5rem;
+    h1{
+        font-size: 12vw;
         line-height: 1.5;
+        text-align: center;
+    }
+    .subheading{
+        text-align: center;
+    }
+    h2{
+        font-size: 16px;
     }
 }
