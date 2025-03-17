@@ -9,6 +9,14 @@
 }
 
 *{
+    $desktop:1200px;
+    $laptop:1024px;
+    $tablet:768px;
+    $phone:480px;
+}
+
+*{
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
@@ -19,12 +27,12 @@ line-height: 1.5rem;
 }
 
 body{
-min-height: 100vh;
-min-height: 100dvh;
-background-color: var(--primary-color);
-color: var(--text-color);
-display: grid;
-grid-template-columns: auto 1fr;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    display: grid;
+    grid-template-columns: auto 1fr;
 }
 
 main{
@@ -36,12 +44,13 @@ main{
 #sidebar{
     box-sizing: border-box;
     height: 100vh;
-    width: 200px;
+    width: 160px;
     padding: 5px 1em;
     background-color: var(--secondary-text-color);
     border-right: 1px solid var(--third-color);
     position: sticky;
     top: 0;
+    left: 0;
     align-self: start;
 }
 
@@ -53,9 +62,6 @@ list-style: none;
     display: flex;
     justify-content: flex-end;
     margin-bottom: 16px;
-    .logo{
-        font-weight: 600;
-    }
     color: var(--primary-color);
 }
 
@@ -63,7 +69,7 @@ list-style: none;
     color: var(--main-brand-color);
 }
 
-#sidebar a, #sidebar .dropdown-button, #sidebar .label{
+#sidebar a, #sidebar .label{
     border-radius: 2em;
     padding: .85em;
     text-decoration: none;
@@ -74,45 +80,35 @@ list-style: none;
     cursor: pointer;
 }
 
-#sidebar src{
-    flex-shrink: 0;
-    fill: var(--secondary-color);
+#sidebar ul .sub-menu{
+    display: block;
+    padding: 10px 25px;
 }
 
-#sidebar a span, #sidebar .dropdown-button span{
-    flex-grow: 1;
-}
-
-#sidebar a:hover, #sidebar .dropdown-button:hover{
-    background-color: var(--hover-clr)
-}
-
-#sidebar .sub-menu{
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: 300ms ease-in-out;
-
-    >div{
-        overflow: hidden;
-    }
+#sidebar a:hover{
+    background-color: var(--text-color);
+    color: var(--main-brand-color)
 }
 
 h1{
-    margin-top: 1em;
+    margin-top: 2em;
+    margin-left: 20px;
 }
 
 .subheading{
 margin-top: 25px;
+margin-left: 20px;
 color: var(--secondary-text-color);
 }
 
-@media (max-width: 600px){
+@media (max-width:1200px){
     p{
         font-size: 1.35rem;
+        line-height: 1.5;
     }
 }
 
-@media (max-width: 800px){
+@media (max-width:480px){
     p{
         font-size: 1.5rem;
         line-height: 1.5;
