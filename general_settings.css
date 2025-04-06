@@ -6,6 +6,10 @@
     --third-color: #68c7d9 ;
     --text-color: #232933 ;
     --secondary-text-color: #2E3744 ;
+    --col-desktop: 1200px;
+    --col-laptop: 1024px;
+    --col-tablet: 768px;
+    --col-phone: 481px;
 }
 
 *{
@@ -26,6 +30,14 @@ body{
     color: var(--text-color);
     display: grid;
     grid-template-columns: auto 1fr;
+    @media (max-width: --col-laptop){
+        padding: 15px;
+        margin: 15px;
+    }
+    @media (max-width: --col-tablet){
+        padding: 15px;
+        margin: 0px;
+    }
 }
 
 main{
@@ -45,6 +57,13 @@ main{
     top: 0;
     left: 0;
     align-self: start;
+    @media (max-width: --col-laptop) {
+        display: block;
+        font-size: 25px;
+    }
+    @media (max-width: --col-laptop) {
+        font-size: 20px;
+    }
 }
 
 #sidebar ul{
@@ -109,9 +128,11 @@ list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: --col-laptop){
+        height: 150px;     
+    }
 }
 
 .square img{
     width: 100%;
 }
-
