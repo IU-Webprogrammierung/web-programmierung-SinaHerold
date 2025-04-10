@@ -1,15 +1,12 @@
 .subheading img{
     height: 250px;
     width: 250px;
-    max-height: 80vw;
-    max-width: 80vw;
+    max-height: 40vw;
+    max-width: 50vw;
     overflow: hidden;
     border-radius: 10%;
     border: 4px solid var(--main-brand-color);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
 }
 
 .square img{

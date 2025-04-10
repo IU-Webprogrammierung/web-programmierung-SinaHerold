@@ -6,6 +6,10 @@
     --third-color: #68c7d9 ;
     --text-color: #232933 ;
     --secondary-text-color: #2E3744 ;
+    --col-desktop: 1200px;
+    --col-laptop: 1024px;
+    --col-tablet: 768px;
+    --col-phone: 481px;
 }
 
 *{
@@ -21,13 +25,14 @@ body{
 
 .timeline{
     position: relative;
-    max-width: 1200px;
-    margin: 0px auto;
+    width: 100%;
+    margin-bottom: 50px;
 }
 .container{
-    padding: 10px 50px;
+    padding: 10px 0;
     position: relative;
     width: 50%;
+    box-sizing: border-box;
 }
 
 .text-box{
