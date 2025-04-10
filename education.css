@@ -20,24 +20,23 @@
 }
 
 body{
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
 }
 
 .timeline{
     position: relative;
-    width: 100%;
-    margin-bottom: 50px;
+    max-width: 1200px;
+    margin: 0px auto;
 }
 .container{
-    padding: 10px 0;
+    padding: 10px 50px;
     position: relative;
     width: 50%;
-    box-sizing: border-box;
 }
 
 .text-box{
     padding: 20px 30px;
-    background: var(--secondary-color);
+    background: var(--primary-color);
     position: relative;
     border-radius: 6px;
     font-size: 15px;
@@ -53,7 +52,7 @@ body{
 
 .container img{
     position: absolute;
-    width: 40px;
+    width: 24px;
     border-radius: 50%;
     right: -20px;
     top: 32px;
@@ -62,18 +61,6 @@ body{
 
 .right-container img{
     left: -20px;
-}
-
-.timeline::after{
-    content: '';
-    position: absolute;
-    width: 6px;
-    height: 100%;
-    background: var(--secondary-color);
-    top: 0;
-    left: 50%;
-    margin-left: -3px;
-    z-index: -1;
 }
 
 .text-box h2{
@@ -93,7 +80,7 @@ body{
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 15px solid var(--secondary-color);
+    border-left: 15px solid var(--primary-color);
     right: -15px;
 }
 
@@ -105,7 +92,7 @@ body{
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 15px solid var(--secondary-color);
+    border-right: 15px solid var(--primary-color);
     left: -15px;
 }
 
@@ -113,33 +100,141 @@ body{
     text-align: center;
 }
 
-@media screen and (max-width: 600px){
+/* PHONE */
+@media (max-width: var(--col-phone)){
     .timeline{
-        margin: auto;
+        margin: 0 10px;
     }
-    .timeline::after{
-        left: 31px;
-    }
+
     .container{
         width: 100%;
-        padding-left: 80px;
-        padding-right: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
     }
+
     .text-box{
-        font-size: 13px;
+        font-size: 14px;
+        padding: 15px 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: auto;
     }
-    .text-box-small{
-        margin-bottom: 10px;
+
+    .left-container, .right-container {
+        width: 100%; 
+        position: relative;
+        left: 0; 
+        margin-left: 0;
     }
-    .right-container{
-        left: 0;
-    }
+
     .left-container img, .right-container img{
-        left: 10px;
+        left: 0;
+        right: 0;
+        margin: 0;
     }
+
     .left-container-arrow, .right-container-arrow{
-        border-right: 15px solid var(--secondary-color);
+        border-right: 15px solid var(--primary-color);
         border-left: 0;
         left: -15px;
+    }
+
+    .text-box h2{
+        font-size: 16px;
+    }
+}
+
+/* TABLET */
+@media (min-width: var(--col-phone)) and (max-width: var(--col-tablet)){
+    .timeline{
+        margin: 0 20px;
+    }
+
+    .container {
+        width: 50%;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .text-box {
+        font-size: 14px;
+    }
+
+    .left-container img, .right-container img {
+        left: -10px;
+    }
+
+    .left-container-arrow, .right-container-arrow {
+        border-right: 15px solid var(--primary-color);
+        border-left: 0;
+        left: -15px;
+    }
+
+    .text-box h2{
+        font-size: 18px;
+    }
+}
+
+/* LAPTOP */
+@media (min-width: var(--col-tablet)) and (max-width: var(--col-laptop)){
+    .timeline {
+        margin: 0 30px;
+    }
+
+    .container {
+        width: 45%;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .text-box {
+        font-size: 15px;
+    }
+
+    .left-container img, .right-container img {
+        left: -15px;
+    }
+
+    .left-container-arrow, .right-container-arrow {
+        border-right: 15px solid var(--primary-color);
+        border-left: 0;
+        left: -15px;
+    }
+
+    .text-box h2{
+        font-size: 20px;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: var(--col-laptop)){
+    .timeline {
+        margin: 0 40px;
+    }
+
+    .container {
+        width: 50%;
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .text-box {
+        font-size: 16px;
+    }
+
+    .left-container img, .right-container img {
+        left: -20px;
+    }
+
+    .left-container-arrow, .right-container-arrow {
+        border-right: 15px solid var(--primary-color);
+        border-left: 0;
+        left: -15px;
+    }
+
+    .text-box h2{
+        font-size: 22px;
     }
 }
