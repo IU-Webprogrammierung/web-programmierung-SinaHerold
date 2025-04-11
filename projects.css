@@ -1,3 +1,16 @@
+:root {
+    --main-brand-color: #eeb16c;
+    --primary-color: #E6EADE;
+    --secondary-color: #a3bd9d;
+    --third-color: #68c7d9;
+    --text-color: #232933;
+    --secondary-text-color: #2E3744;
+    --col-desktop: 1200px;
+    --col-laptop: 1024px;
+    --col-tablet: 768px;
+    --col-phone: 481px;
+  }
+
 .subheading img{
     height: 250px;
     width: 250px;
@@ -5,10 +18,27 @@
     max-width: 50vw;
     overflow: hidden;
     border-radius: 10%;
-    border: 4px solid var(--main-brand-color);
     display: flex;
 }
 
 .square img{
     width: 100%;
+}
+
+.project-button{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-button:hover{
+    background-color: var(--main-brand-color);
+    transform: scale(1.1);
 }
