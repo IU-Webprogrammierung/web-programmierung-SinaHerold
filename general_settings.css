@@ -30,7 +30,7 @@ html, body {
 }
 
 .layout {
-  display: relative;
+  display: flex;
   min-height: 100vh;
 }
 
@@ -40,7 +40,7 @@ nav {
   transition: width 0.3s ease;
   overflow: hidden;
   box-shadow: 0 20px 35px var(--text-color);
-  position: absolute;
+  position: fixed;
   z-index: 10;
   left: 0;
   top: 0;
@@ -77,18 +77,18 @@ ul {
 }
 
 a {
-  display: table;
+  display: flex;
   width: 100%;
   color: var(--text-color);
   font-size: 14px;
   padding: 10px;
-  display: flex;
   align-items: center;
   justify-content: flex-start; 
 }
 
 a:hover {
   background: var(--secondary-color);
+  transition: color 0.3s ease;
 }
 
 img {
@@ -101,13 +101,11 @@ img {
 }
 
 .nav-item {
-  position: relative;
-  top: 0;
   margin-left: 20px;
   white-space: nowrap;
 }
 
-nav:hover .logo span {
+nav:hover .logo span, nav:hover .nav-item {
   display: block; 
 }
 
@@ -115,23 +113,45 @@ nav:hover .logo span {
   margin: 0 8px;
 }
 
-.center {
-    position: relative;
-    z-index: 1;
-    margin-left: 50px;
+.intro-container{
+    display: flex;
+    flex-wrap: wrap;
     padding: 2rem;
+    margin-left: 50px;
+    gap: 2rem;
+    flex: 1;
+    align-items: center;
+}
+
+.text{
+    flex: 1 1 300px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.text h1{
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.text p{
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.text p:first-of-type{
+    margin-top: 1rem;
 }
 
 .Profilbild{
-    width: 120px;
+    width: 180px;
     height: auto;
     border-radius: 10%;
-    margin-top: 2rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     box-shadow: 0 4px 8px var(--secondary-text-color);
+    flex-shrink: 0;
 }
+
+
 
 /* PHONE */
 @media (max-width: var(--col-phone)) {
@@ -149,29 +169,27 @@ nav:hover .logo span {
     width: 180px;
   }
 
-  .center {
+  .intro-container {
+    flex-direction: row;
     padding: 1rem;
     margin-left: 50px;
+    align-items: flex-start;
+    gap: 1rem;
   }
 
-  .nav-item {
-    display: inline-block;
-    margin-left: 8px;
-    font-size: 12px;
+  .Profilbild{
+    width: 120px;
+    height:auto;
+    margin: 1rem 0 0 0;
   }
 
-  a {
-    width: 100%;
-    padding: 8px;
-  }
-
-  .logo span,
-  .nav-item {
+  .nav-item,
+  .logo span {
     display: none;
   }
 
-  nav:hover .logo span,
-  nav:hover .nav-item {
+  nav:hover .nav-item,
+  nav:hover .logo span {
     display: block;
   }
 }
@@ -184,21 +202,20 @@ nav:hover .logo span {
 
   nav {
     width: 50px;
-    height: 100vh;
-    box-shadow: none;
   }
 
   nav:hover {
     width: 180px;
   }
 
-  .center {
+  .intro-container {
+    flex-direction: column;
     padding: 1.5rem;
     margin-left: 50px;
   }
 
-  .nav-item {
-    font-size: 14px;
+  .Profilbild {
+    margin-top: 1.5rem;
   }
 
   .logo span,
@@ -215,16 +232,16 @@ nav:hover .logo span {
 /* LAPTOP */
 @media (min-width: var(--col-tablet)) and (max-width: var(--col-laptop)) {
   nav {
-    width: 60px;
+    width: 50px;
   }
 
   nav:hover {
-    width: 160px;
+    width: 180px;
   }
 
-  .center {
+  .intro-container {
     padding: 2rem;
-    margin-left: 60px; 
+    margin-left: 50px;
   }
 }
 
