@@ -151,6 +151,17 @@ nav:hover .logo span, nav:hover .nav-item {
     flex-shrink: 0;
 }
 
+.main-content{
+    margin-left: 50px;
+    flex: 1;
+    padding: 2rem;
+    position: relative;
+}
+
+.center{
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 
 /* PHONE */
@@ -192,11 +203,32 @@ nav:hover .logo span, nav:hover .nav-item {
   nav:hover .logo span {
     display: block;
   }
+
+  .main-content{
+    margin-left: 50px;
+    padding: 1rem;
+  }
+
+  .main-content h1, .subheading h2{
+    text-align: center;
+  }
+
+  .main-content p, .subheading p{
+    text-align: left;
+  }
+
+  .main-content{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
 }
 
 /* TABLET */
 @media (min-width: var(--col-phone)) and (max-width: var(--col-tablet)) {
-  .layout {
+  .layout{
     flex-direction: column;
   }
 
@@ -204,28 +236,44 @@ nav:hover .logo span, nav:hover .nav-item {
     width: 50px;
   }
 
-  nav:hover {
+  nav:hover{
     width: 180px;
   }
 
-  .intro-container {
+  .intro-container{
     flex-direction: column;
     padding: 1.5rem;
     margin-left: 50px;
   }
 
-  .Profilbild {
+  .Profilbild{
     margin-top: 1.5rem;
   }
 
   .logo span,
-  .nav-item {
+  .nav-item{
     display: none; 
   }
 
   nav:hover .logo span,
-  nav:hover .nav-item {
+  nav:hover .nav-item{
     display: block; 
+  }
+
+  .main-content h1, .subheading h2{
+    text-align: center;
+  }
+
+  .main-content p, .subheading p{
+    text-align: left;
+  }
+
+  .main-content{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 }
 
