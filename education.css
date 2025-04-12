@@ -108,30 +108,26 @@ body{
 
     .container{
         width: 100%;
-        padding-left: 80px;
+        padding-left: 20px;
         padding-right: 20px;
         position: relative;
+        text-align: left;
     }
 
-    .left-container, .right-container {
+    .left-container, .right-container{
         left: 0; 
-    }
-
-    .left-container img, .right-container img{
-        left: 10px;
-        right: 0;
-    }
-
-    .left-container-arrow, .right-container-arrow{
-        border-right: 15px solid var(--primary-color);
-        border-left: none;
-        left: -15px;
-        right: auto;
+        text-align: left;
     }
 
     .container img{
-        left: 10px;
+        left: 0;
         right: auto;
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    .left-container img, .right-container img{
+        left: 0;
     }
 
     .text-box{
@@ -152,6 +148,24 @@ body{
         margin-bottom: 10px;
         display: inline-block;
     }
+
+    .left-container-arrow{
+        border-right: 15px solid var(--primary-color);
+        border-left: none;
+        left: -15px;
+        right: auto;
+    }
+
+    .right-container-arrow{
+        border-left: 15px solid var(--primary-color);
+        border-right: none;
+        right: -15px;
+        left: auto;
+    }
+
+    .timeline .container img{
+        margin-bottom: 20px;
+    }
 }
 
 /* TABLET */
@@ -160,21 +174,21 @@ body{
         margin: 0 20px;
     }
 
-    .container {
+    .container{
         width: 50%;
         padding-left: 50px;
         padding-right: 50px;
     }
 
-    .text-box {
+    .text-box{
         font-size: 14px;
     }
 
-    .left-container img, .right-container img {
+    .left-container img, .right-container img{
         left: -10px;
     }
 
-    .left-container-arrow, .right-container-arrow {
+    .left-container-arrow, .right-container-arrow{
         border-right: 15px solid var(--primary-color);
         border-left: 0;
         left: -15px;
@@ -187,25 +201,25 @@ body{
 
 /* LAPTOP */
 @media (min-width: var(--col-tablet)) and (max-width: var(--col-laptop)){
-    .timeline {
+    .timeline{
         margin: 0 30px;
     }
 
-    .container {
+    .container{
         width: 45%;
         padding-left: 60px;
         padding-right: 60px;
     }
 
-    .text-box {
+    .text-box{
         font-size: 15px;
     }
 
-    .left-container img, .right-container img {
+    .left-container img, .right-container img{
         left: -15px;
     }
 
-    .left-container-arrow, .right-container-arrow {
+    .left-container-arrow, .right-container-arrow{
         border-right: 15px solid var(--primary-color);
         border-left: 0;
         left: -15px;
@@ -218,25 +232,25 @@ body{
 
 /* DESKTOP */
 @media (min-width: var(--col-laptop)){
-    .timeline {
+    .timeline{
         margin: 0 40px;
     }
 
-    .container {
+    .container{
         width: 50%;
         padding-left: 70px;
         padding-right: 70px;
     }
 
-    .text-box {
+    .text-box{
         font-size: 16px;
     }
 
-    .left-container img, .right-container img {
+    .left-container img, .right-container img{
         left: -20px;
     }
 
-    .left-container-arrow, .right-container-arrow {
+    .left-container-arrow, .right-container-arrow{
         border-right: 15px solid var(--primary-color);
         border-left: 0;
         left: -15px;
