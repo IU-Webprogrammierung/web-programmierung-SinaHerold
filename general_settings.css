@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 
-:root {
+:root{
   --main-brand-color: #eeb16c;
   --primary-color: #E6EADE;
   --secondary-color: #a3bd9d;
@@ -13,7 +13,7 @@
   --col-phone: 481px;
 }
 
-* {
+*{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -22,19 +22,40 @@
   text-decoration: none;
 }
 
-html, body {
+html, body{
   height: 100%;
   font-family: 'Sora', sans-serif;
   line-height: 1.5rem;
   background: var(--secondary-color);
 }
 
-.layout {
+.layout{
   display: flex;
   min-height: 100vh;
 }
 
-nav {
+.menu-toggle{
+  display: none;
+}
+
+.hamburger-label{
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 20;
+  background-color: var(--primary-color);
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hamburger-label img{
+  width: 24px;
+  height: 24px;
+}
+
+nav{
   background: var(--primary-color);
   width: 50px;
   transition: width 0.3s ease;
@@ -48,23 +69,23 @@ nav {
   height: 100vh;
 }
 
-nav:hover {
+nav:hover{
   width: 180px;
 }
 
-.logo {
+.logo{
   display: flex;
   align-items: center;
   margin: 10px 0;
   justify-content: center;
 }
 
-.logo img {
+.logo img{
   width: 24px;
   height: 24px;
 }
 
-.logo span {
+.logo span{
   font-weight: bold;
   padding-left: 14px;
   font-size: 16px;
@@ -72,11 +93,11 @@ nav:hover {
   display: none;
 }
 
-ul {
+ul{
   list-style-type: none;
 }
 
-a {
+a{
   display: flex;
   width: 100%;
   color: var(--text-color);
@@ -86,12 +107,12 @@ a {
   justify-content: flex-start; 
 }
 
-a:hover {
+a:hover{
   background: var(--secondary-color);
   transition: color 0.3s ease;
 }
 
-img {
+img{
   width: 24px;
   height: 24px;
   position: relative;
@@ -100,135 +121,140 @@ img {
   transition: all 0.2s ease;
 }
 
-.nav-item {
+.nav-item{
   margin-left: 20px;
   white-space: nowrap;
 }
 
-nav:hover .logo span, nav:hover .nav-item {
+nav:hover .logo span, nav:hover .nav-item{
   display: block; 
 }
 
-.sub-menu {
+.sub-menu{
   margin: 0 8px;
 }
 
 .intro-container{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 2rem;
-    margin-left: 50px;
-    gap: 2rem;
-    flex: 1;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  margin-left: 50px;
+  gap: 2rem;
+  flex: 1;
+  align-items: center;
 }
 
 .text{
-    flex: 1 1 300px;
-    padding: 1rem;
-    margin-bottom: 1rem;
+  flex: 1 1 300px;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 .text h1{
-    margin-bottom: 2rem;
-    font-weight: bold;
+  margin-bottom: 2rem;
+  font-weight: bold;
 }
 
 .text h2{
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .text p{
-    font-size: 1.125rem;
-    line-height: 1.6;
+  font-size: 1.125rem;
+  line-height: 1.6;
 }
 
 .text p:first-of-type{
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .Profilbild{
-    width: 180px;
-    height: auto;
-    border-radius: 10%;
-    box-shadow: 0 4px 8px var(--secondary-text-color);
-    flex-shrink: 0;
+  width: 180px;
+  height: auto;
+  border-radius: 10%;
+  box-shadow: 0 4px 8px var(--secondary-text-color);
+  flex-shrink: 0;
 }
 
 .main-content{
-    margin-left: 50px;
-    flex: 1;
-    padding: 2rem;
-    position: relative;
+  margin-left: 50px;
+  flex: 1;
+  padding: 2rem;
+  position: relative;
 }
 
 .center{
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
 
 /* PHONE */
 @media (max-width: var(--col-phone)){
-    .layout{
-        flex-direction: column;
-      }
-    
-      nav{
-        width: 50px; 
-        height: 100vh;
-        transition: width 0.3s ease;
-        overflow: hidden;
-        box-shadow: none;
-      }
-    
-      nav:hover{
-        width: 180px;
-      }
+  .layout{
+    flex-direction: column;
+  }
 
-      .logo span, .nav-item{
-        display: none;
-      }
+  nav{
+    width: 0;
+    transition: width 0.3s ease;
+  }
 
-      nav:hover .logo span, nav:hover .nav-item{
-        display: block;
-      }
+  nav ul{
+    display: none;
+  }
 
-      .intro-container{
-        flex-direction: row;
-        padding: 1rem;
-        margin-left: 50px;
-        align-items: flex-start;
-        gap: 1rem;
-      }
+  .menu-toggle:checked + .hamburger-label + nav{
+    width: 180px;
+  }
 
-      .Profilbild{
-        width: 120px;
-        height: auto;
-        margin: 1rem 0 0 0;
-      }
+  .menu-toggle:checked + .hamburger-label + nav ul{
+    display: block;
+  }
 
-      .main-content{
-        margin-left: 50px;
-        padding: 1rem;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-      }
+  .hamburger-label{
+    display: block;
+  }
 
-      .main-content h1, .subheading h2{
-        text-align: center;
-      }
+  nav .logo span,
+  nav .nav-item{
+    display: block;
+  }
 
-      .main-content p, .subheading p{
-        text-align: left;
-      }
+  .intro-container{
+    flex-direction: row;
+    padding: 1rem;
+    margin-left: 50px;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .Profilbild{
+    width: 120px;
+    height: auto;
+    margin: 1rem 0 0 0;
+  }
+
+  .main-content{
+    margin-left: 50px;
+    padding: 1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .main-content h1, .subheading h2{
+    text-align: center;
+  }
+
+  .main-content p, .subheading p{
+    text-align: left;
+  }
 }
 
 /* TABLET */
-@media (min-width: var(--col-phone)) and (max-width: var(--col-tablet)) {
+@media (min-width: var(--col-phone)) and (max-width: var(--col-tablet)){
   .layout{
     flex-direction: column;
   }
@@ -279,7 +305,7 @@ nav:hover .logo span, nav:hover .nav-item {
 }
 
 /* LAPTOP */
-@media (min-width: var(--col-tablet)) and (max-width: var(--col-laptop)) {
+@media (min-width: var(--col-tablet)) and (max-width: var(--col-laptop)){
   nav{
     width: 50px;
   }
@@ -295,7 +321,7 @@ nav:hover .logo span, nav:hover .nav-item {
 }
 
 /* DESKTOP */
-@media (min-width: var(--col-laptop)) {
+@media (min-width: var(--col-laptop)){
   nav{
     width: 50px;
   }
@@ -308,4 +334,4 @@ nav:hover .logo span, nav:hover .nav-item {
     padding: 2.5rem;
     margin-left: 50px; 
   }
-} 
+}
