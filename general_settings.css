@@ -141,7 +141,7 @@ nav:hover .logo span, nav:hover .nav-item{
   margin-left: 50px;
   gap: 2rem;
   flex: 1;
-  align-items: center;
+  align-items: flex-start
 }
 
 .text{
