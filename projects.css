@@ -1,6 +1,6 @@
 :root {
     --main-brand-color: #eeb16c;
-    --primary-color: #E6EADE;
+    --primary-color: #fcfff6;
     --secondary-color: #a3bd9d;
     --third-color: #68c7d9;
     --text-color: #232933;
@@ -46,7 +46,7 @@
 }
 
 .project-button:hover{
-    background-color: var(--main-brand-color);
+    background-color: var(--primary-color);
     transform: scale(1.1);
 }
 
@@ -79,7 +79,6 @@
   }
   
   
-
 /* PHONE */
 @media (max-width: var(--col-phone)){
     .images img{
@@ -98,7 +97,7 @@
 @media (min-width: var(--col-phone)){
     .subheading img{
         width: auto;
-        height: 120px;
+        height: 100px;
         max-width: 100%;
         object-fit: contain;
     }
@@ -108,7 +107,7 @@
 @media (min-width: var(--col-laptop)){
     .subheading img{
         width: auto;
-        height: 150px;
+        height: 140px;
         max-width: 100%;
         object-fit: contain;
     }

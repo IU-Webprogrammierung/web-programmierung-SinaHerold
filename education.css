@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 :root{
-    --main-brand-color: #eeb16c ;
-    --primary-color: #E6EADE ;
-    --secondary-color: #a3bd9d ;
-    --third-color: #68c7d9 ;
-    --text-color: #232933 ;
-    --secondary-text-color: #2E3744 ;
+    --main-brand-color: #eeb16c;
+    --primary-color: #fcfff6;
+    --secondary-color: #a3bd9d;
+    --third-color: #68c7d9;
+    --text-color: #232933;
+    --secondary-text-color: #2E3744;
     --col-desktop: 1200px;
     --col-laptop: 1024px;
     --col-tablet: 768px;
@@ -29,13 +29,14 @@ body{
     margin: 0px auto;
 }
 .container{
+    margin-top: 2rem;
     padding: 10px 50px;
     position: relative;
     width: 50%;
 }
 
 .text-box{
-    padding: 20px 30px;
+    padding: 10px 40px;
     background: var(--primary-color);
     position: relative;
     border-radius: 6px;
@@ -43,7 +44,7 @@ body{
 }
 
 .left-container{
-    left:0
+    left:0;
 }
 
 .right-container{
@@ -54,13 +55,13 @@ body{
     position: absolute;
     width: 24px;
     border-radius: 50%;
-    right: -20px;
-    top: 32px;
+    right: -12px;
+    top: 40px;
     z-index: 10;
 }
 
 .right-container img{
-    left: -20px;
+    left: -12px;
 }
 
 .text-box h2{
@@ -98,6 +99,14 @@ body{
 
 .center{
     text-align: center;
+}
+
+.certificate{
+    margin-top: 2rem;
+}
+
+.skill{
+    margin-top: 2rem;
 }
 
 /* PHONE */

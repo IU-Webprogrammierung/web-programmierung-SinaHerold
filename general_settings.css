@@ -2,7 +2,7 @@
 
 :root{
   --main-brand-color: #eeb16c;
-  --primary-color: #E6EADE;
+  --primary-color: #fcfff6;
   --secondary-color: #a3bd9d;
   --third-color: #68c7d9;
   --text-color: #232933;
@@ -31,7 +31,7 @@ html, body{
 
 .layout{
   display: flex;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .menu-toggle{
@@ -59,14 +59,15 @@ nav{
   background: var(--primary-color);
   width: 50px;
   transition: width 0.3s ease;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto; /* NEU */
   box-shadow: 0 20px 35px var(--text-color);
   position: fixed;
   z-index: 10;
   left: 0;
   top: 0;
   bottom: 0;
-  height: 100vh;
+  height: 100%;
 }
 
 nav:hover{
@@ -186,6 +187,29 @@ nav:hover .logo span, nav:hover .nav-item{
 .center{
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.download{
+  margin-top: 3rem;
+}
+
+.download-btn {
+  display: inline-block;
+  padding:1rem 2rem;
+  background-color: var(--text-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
 }
 
 /* PHONE */
