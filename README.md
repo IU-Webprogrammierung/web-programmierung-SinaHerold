@@ -20,4 +20,11 @@ Das Erstellen des reponsiven Designs wird mithilfen von MediaQueries erreicht. Z
 In Phase 3 wird der Code weiter optimiert und angepasst, sowie ein Abstract geschrieben. Ebenso möchte ich, die Einsetzung bzw. Abänderung einiger einfachen Codes zu zusätzlichen Darstllungsformen überarbeiten, um somit das Level der eingesetzten Befehle etwas zu steigern.
 
 
+Finalisierung:
+
+CSS-Code wird weiter überarbeitet, Anpassungen an html vorgenommen und die Menüstruktur verbessert. Dazu sind Icons eingearbeitet, die die Menüstruktur im zugeklappten Zustand darstellen. Desweiteren wird an den Darstellungen der Aufzählungen mit Bildern gearbeitet. Diese sollen durch hovern vergrößert dargestellt werden. Um eine responsive Darstellung zu gewährleisten wird mit Media Queries gearbeitet, die zu Beginn des CSS Codes mithilfe von Kürzeln dargestellt sind. Somit soll die korrekte Einarbeitung in den Codes gestattet werden. 
+
+Nach dem weiteren Überarbeiten wird zur finalen Abgabe alle vorgegebenen Anforderungen überprüft und in Form von PDF Dateien bereitgestellt - darunter Screenshots, ein Abstract und ein zip.Ordner. Zum Ende des Projekts lässt sich sagen, dass sehr viel Wissen über das vorgehen zur Erstellung eines Portfolios mit html und CSS gelernt wurde. Von Grund auf wurden alle Befehle und Interaktionen erarbeitet und angewandt.
+
+
 Projetkverantworliche: Sina Herold
