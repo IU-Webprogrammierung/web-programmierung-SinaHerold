@@ -51,15 +51,12 @@
 }
 
 .images{
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
-    padding: 1rem;
-    max-width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
+    padding: 1rem 0;
+    overflow: visible;
   }
   
   .images img{
@@ -68,18 +65,17 @@
     height: auto;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 0 4px 8px var(--secondary-text-color);
     transition: transform 0.4s ease-in-out;
     object-fit: cover;
+    box-shadow: 0 4px 8px var(--secondary-text-color);
     z-index: 1;
-    position: relative;
+    transform-origin: center center;
   }
   
+
   .images img:hover{
-    transform: scale(2);
-    transform-origin: center center;
+    transform: scale(2.5);
     z-index: 10;
-    transition: transform 0.4s ease-in-out;
   }
   
   
@@ -123,54 +119,53 @@
     flex-direction: column;
     gap: 2rem;
     margin-top: 2rem;
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto
 }
 
 .card{
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     gap: 2rem;
     align-items: flex-start;
     background-color: var(--primary-color);
     padding: 1.5rem;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-
-.card:nth-child(even){
-    flex-direction: row-reverse;
+    box-shadow: 0 4px 12px var(--secondary-text-color)
 }
 
 .card p{
-    flex: 1 1 300px;
-    color: var(--text-color);
+    flex: 1 1 60%;
+    margin: 0;
     font-size: 1rem;
     line-height: 1.6;
-    margin: 0;
-}
+    color: var(--text-color);
+  }
 
-.card .images{
-    flex: 1 1 300px;
+  .card .images{
+    flex: 1 1 40%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     justify-content: flex-start;
     padding: 0;
-}
+  }
 
 .card .images img{
-    max-width: 100%;
+    width: 100%;
+    max-width: 150px;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px var(--secondary-text-color);
-    transition: transform 0.4s ease-in-out;
     object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--secondary-text-color)
 }
 
 /*  Einspaltig auf kleinen Screens */
 @media (max-width: var(--col-tablet)){
     .card{
-        flex-direction: column;
-    }
-
-    .card:nth-child(even){
         flex-direction: column;
     }
 
