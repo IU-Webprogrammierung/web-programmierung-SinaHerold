@@ -163,6 +163,7 @@ nav:hover .logo span, nav:hover .nav-item{
 .text p{
   font-size: 1.125rem;
   line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 .text p:first-of-type{
@@ -182,11 +183,6 @@ nav:hover .logo span, nav:hover .nav-item{
   flex: 1;
   padding: 2rem;
   position: relative;
-}
-
-.center{
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .download{

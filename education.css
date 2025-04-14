@@ -97,17 +97,18 @@ body{
     left: -15px;
 }
 
-.center{
-    text-align: center;
+.certificate{
+    margin-top: 3rem;
 }
 
-.certificate{
-    margin-top: 2rem;
+.certificate p, .skill p{
+    margin-top: 1rem;
 }
 
 .skill{
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
+
 
 /* PHONE */
 @media screen and (max-width: var(--col-phone)){

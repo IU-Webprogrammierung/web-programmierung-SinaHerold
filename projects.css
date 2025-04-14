@@ -16,6 +16,10 @@
     margin-bottom: .5rem;
 }
 
+.subheading p{
+    margin-top: 2rem;
+}
+
 .subheading img{
     height: 250px;
     width: 250px;
