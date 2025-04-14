@@ -72,48 +72,12 @@
     transform-origin: center center;
   }
   
-
   .images img:hover{
     transform: scale(2.5);
     z-index: 10;
   }
   
-  
-/* PHONE */
-@media (max-width: var(--col-phone)){
-    .images img{
-        max-width: 100%;
-    }
-
-    .images img:hover{
-        transform: scale(1.1);
-        max-width: 100vw;
-        max-height: 100vh;
-        object-fit: contain;
-    }
-}
-
-/* TABLET*/
-@media (min-width: var(--col-phone)){
-    .subheading img{
-        width: auto;
-        height: 100px;
-        max-width: 100%;
-        object-fit: contain;
-    }
-}
-
-/* DESKTOP */
-@media (min-width: var(--col-laptop)){
-    .subheading img{
-        width: auto;
-        height: 140px;
-        max-width: 100%;
-        object-fit: contain;
-    }
-}
-
-.flex-container{
+  .flex-container{
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -161,14 +125,62 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px var(--secondary-text-color)
 }
+  
+/* PHONE */
+@media (max-width: var(--col-phone)){
+    .images img{
+        max-width: 100%;
+    }
 
-/*  Einspaltig auf kleinen Screens */
-@media (max-width: var(--col-tablet)){
+    .images img:hover{
+        transform: scale(2);
+        max-width: 100vw;
+        max-height: 100vh;
+        object-fit: contain;
+    }
+
     .card{
         flex-direction: column;
+        align-items: center;
+        text-align: left;
     }
 
     .card .images{
+        width: 100%;
         justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .card .images img{
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        box-shadow: 0 2px 4px var(--secondary-text-color);
+    }
+
+    .card p{
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+}
+
+/* TABLET*/
+@media (min-width: var(--col-phone)){
+    .subheading img{
+        width: auto;
+        height: 100px;
+        max-width: 100%;
+        object-fit: contain;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: var(--col-laptop)){
+    .subheading img{
+        width: auto;
+        height: 140px;
+        max-width: 100%;
+        object-fit: contain;
     }
 }
